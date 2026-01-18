@@ -6,6 +6,7 @@ export class HealthController {
   ok() {
     return {
       ok: true,
+      hasDbUrl: !!process.env.DATABASE_URL,
       timestamp: new Date().toISOString(),
     };
   }
